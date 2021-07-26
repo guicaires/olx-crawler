@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Goutte\Client;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 
 class CrawlerController extends Controller
 {
@@ -13,6 +14,10 @@ class CrawlerController extends Controller
     public function olxCrawler ($search = null)
     {
         $client = new Client();
+
+        if (Cache::has($search)) {
+            return Cache::get($search);
+        }
 
         $page = $client->request('GET', $this->url . $search);
 
@@ -29,6 +34,10 @@ class CrawlerController extends Controller
             ];
 
         });
+
+        if (count($this->results) > 0 && $search) {
+            Cache::put($search, $this->results, 60);
+        }
 
         return response($this->results);
     }
