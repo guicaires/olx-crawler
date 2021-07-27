@@ -2,17 +2,16 @@
 
 namespace Tests\Feature;
 
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
-class ExampleTest extends TestCase
+class OlxCrawlerTest extends TestCase
 {
     /**
-     * A basic test example.
+     * Checks if the home page returns HTTP status code 200
      *
      * @return void
      */
-    public function test_example()
+    public function test_assert_home_page_http_status()
     {
         $response = $this->get('/');
 
