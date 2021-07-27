@@ -36,7 +36,7 @@ class CrawlerController extends Controller
         });
 
         if (count($this->results) > 0 && $search) {
-            Cache::put($search, $this->results, 60);
+            Cache::put($search, $this->results, 60 * 60 * 1); // 1 hour
         }
 
         return response($this->results);
