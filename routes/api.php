@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,8 +13,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
-
-Route::get('olxCrawler/{search?}', [App\Http\Controllers\CrawlerController::class, 'olxCrawler'])->name('olxCrawler');
+Route::get('olxCrawler/{search?}', 'App\Http\Controllers\CrawlerController@olxCrawler');
