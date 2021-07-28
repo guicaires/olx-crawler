@@ -33,7 +33,7 @@ const injectCarsToDOM = cars => {
 const getCars = search => fetch(`/api/olxCrawler/${search}`)
     .then(res => res.ok ? res.json() : Promise.reject(res))
     .then(data => injectCarsToDOM(data))
-    .then(() => location = '#results');
+    .then(() => stopLoader());
 
 const form = document.getElementById('form');
 
@@ -41,6 +41,8 @@ form.addEventListener('submit', e => {
     e.preventDefault();
 
     const search = e.target[0].value;
+
+    startLoader();
 
     getCars(search);
 })

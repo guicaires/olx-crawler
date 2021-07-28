@@ -1,0 +1,27 @@
+.loader {
+    left: 0;
+    right: 100%;
+    z-index: 101;
+    height: 100vh;
+    position: absolute;
+    transition: 200ms ease;
+    background-color: #6E0AD6;
+}
+
+.loader i {
+    top: 50%;
+    right: 100%;
+    position: fixed;
+    color: #8CE563;
+    transition: 200ms ease;
+}
+
+.loading:after {
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    content: " ";
+    z-index: 100;
+    position: absolute;
+    background-color: #fff;
+}

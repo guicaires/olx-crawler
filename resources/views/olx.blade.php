@@ -7,10 +7,15 @@
         <title>Olx Crawler</title>
 
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/loader.css">
 
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     </head>
     <body class="antialiased">
+        <div class="loader">
+            <i class="fa fa-2x fa fa-circle-o-notch	fa-spin"></i>
+        </div>
         <div class="relative flex items-top justify-center min-h-screen items-center py-4 pt-0">
             <div class="max-w-6xl mx-auto px-6 lg:px-8">
                 <div class="flex justify-center justify-start items-center">
@@ -44,5 +49,6 @@
         </div>
         <div id="results"></div>
         <script src="/js/api.js"></script>
+        <script src="/js/loader.js"></script>
     </body>
 </html>
