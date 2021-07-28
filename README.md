@@ -30,6 +30,12 @@ Instale as dependências:
 composer install
 ```
 
+Crie o .env a partir do .env.example:
+
+```sh
+cp .env.example .env
+```
+
 Gere o APP_KEY do Laravel:
 
 ```sh
