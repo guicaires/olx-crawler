@@ -45,7 +45,7 @@ php artisan key:generate
 Dê permissão de escrita para pasta storage:
 
 ```sh
-sudo chmod 777 -R ./storage/
+chmod 777 -R ./storage/
 ```
 
 Inicie o projeto:
