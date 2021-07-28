@@ -2,7 +2,7 @@
 
 1 - [Git](https://git-scm.com/)
 
-2 - [Docker](https://docker.com)
+2 - [Docker](https://docker.com) (Com [compose](https://docs.docker.com/compose/install/))
 
 3 - Linux ou [WSL2](https://docs.microsoft.com/pt-br/windows/wsl/install-win10) (Windows Subsystem for Linux)
 
