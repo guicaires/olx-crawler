@@ -23,7 +23,7 @@ cd teste-vaga-alpes-one
 Suba o container do docker:
 
 ```sh
-docker compose up -d
+docker-compose up -d
 ```
 
 Acesse o bash do container:
