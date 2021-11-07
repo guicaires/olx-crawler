@@ -11,13 +11,13 @@
 Clone o repositório:
 
 ```sh
-git clone https://github.com/gcairesdev/teste-vaga-alpes-one
+git clone https://github.com/gcairesdev/olx-crawler
 ```
 
 Navegue à pasta do projeto:
 
 ```sh
-cd teste-vaga-alpes-one
+cd olx-crawler
 ```
 
 Suba o container do docker:
@@ -29,7 +29,7 @@ docker-compose up -d
 Acesse o bash do container:
 
 ```sh
-docker exec -it teste-vaga-alpes-one_php-fpm_1 /bin/bash
+docker exec -it olx-php /bin/bash
 ```
 
 Instale as dependências:
@@ -53,7 +53,7 @@ php artisan key:generate
 Dê permissão de escrita para pasta storage:
 
 ```sh
-chmod 777 -R ./storage/
+chown -R $USER:www-data storage
 ```
 
 Inicie o projeto:

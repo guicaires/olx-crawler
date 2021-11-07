@@ -1,6 +1,7 @@
 version: '3.1'
 services:
     webserver:
+        container_name: olx-web
         image: 'nginx:alpine'
         working_dir: /application
         volumes:
@@ -10,6 +11,7 @@ services:
             - '8000:80'
 
     php-fpm:
+        container_name: olx-php
         build: phpdocker/php-fpm
         working_dir: /application
         volumes:
