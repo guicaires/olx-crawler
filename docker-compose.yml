@@ -3,9 +3,9 @@ services:
     webserver:
         container_name: olx-web
         image: 'nginx:alpine'
-        working_dir: /application
+        working_dir: /var/www/olx-crawler
         volumes:
-            - '.:/application'
+            - '.:/var/www/olx-crawler'
             - './phpdocker/nginx/nginx.conf:/etc/nginx/conf.d/default.conf'
         ports:
             - '8000:80'
@@ -13,7 +13,11 @@ services:
     php-fpm:
         container_name: olx-php
         build: phpdocker/php-fpm
-        working_dir: /application
+        working_dir: /var/www/olx-crawler
         volumes:
-            - '.:/application'
+            - '.:/var/www/olx-crawler'
             - './phpdocker/php-fpm/php-ini-overrides.ini:/etc/php/7.4/fpm/conf.d/99-overrides.ini'
+
+volumes:
+  volume:
+    driver: local
