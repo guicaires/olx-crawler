@@ -10,7 +10,7 @@
     <img src="https://img.shields.io/github/languages/top/gcairesdev/olx-crawler?color=8ce563&style=for-the-badge"></img>
   </a>
   <a href="https://github.com/gcairesdev/olx-crawler">
-    <img src="https://img.shields.io/github/license/gcairesdev/olx-crawler?color=f28000&style=for-the-badge"></img>
+    <img src="https://img.shields.io/github/license/gcairesdev/olx-crawler?color=f28000&style=for-the-badge&"></img>
   </a>
 </p>
 
