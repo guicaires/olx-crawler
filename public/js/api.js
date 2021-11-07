@@ -7,6 +7,7 @@ const injectCarsToDOM = cars => {
             <div class="result">
                 <div class="img">
                     <img src="${car.image}" alt="${car.title}">
+                    <div class="bg-img" style="background-image: url(${car.image})"></div>
                 </div>
                 <div class="content">
                     <div class="header">
