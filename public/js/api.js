@@ -16,7 +16,7 @@ const injectCarsToDOM = cars => {
                             <p>${car.description}</p>
                         </div>
                         <div class="col2">
-                            <b>${car.price}</b>
+                            <span>${car.price}</span>
                             <span>${car.date} <br> ${car.time}</span>
                         </div>
                     </div>
