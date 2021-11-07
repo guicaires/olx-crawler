@@ -10,12 +10,10 @@ const startLoader = () => {
 }
 
 const stopLoader = () => {
-    setTimeout(() => {
-        loader.style.right = '100%';
-        spinner.style.right = '100%';
-        body.style.overflow = '';
-        body.classList.remove('loading');
+    loader.style.right = '100%';
+    spinner.style.right = '100%';
+    body.style.overflow = '';
+    body.classList.remove('loading');
 
-        setTimeout(() => location = '#results', 200);
-    }, 700)
+    location = '#results';
 }
